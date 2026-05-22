@@ -2,7 +2,9 @@ services:
   - type: web
     name: house-price-api
     env: python
-    buildCommand: pip install -r requirements.txt && python model_training.py
+    buildCommand: pip install -r requirements.txt
+    # Note: Model files are pre-trained and tracked in git for faster deployment.
+    # To retrain, run: python model_training.py locally then commit the updated .pkl files.
     startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:

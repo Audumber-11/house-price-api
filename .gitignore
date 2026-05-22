@@ -23,8 +23,8 @@ env/
 .DS_Store
 Thumbs.db
 
-# ML models (trained during build)
-models/*.pkl
+# ML models (trained during build; tracked in git for faster deployment)
+# models/*.pkl
 
 # Generated plots
 *.png
