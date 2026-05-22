@@ -18,9 +18,17 @@ python model_training.py
 uvicorn api:app --reload
 ```
 
+## Web UI
+
+Visit `http://localhost:8000/` in your browser for an interactive prediction form with:
+- Dark-themed UI with glassmorphism design
+- Pre-loaded sample data
+- Real-time price prediction
+- Async loading states and error handling
+
 ## API Endpoints
 
-- `GET /` - API info
+- `GET /` - Web UI (browser) or API info (JSON)
 - `GET /health` - Health check
 - `POST /predict` - Single prediction
 - `POST /predict_batch` - Batch predictions
